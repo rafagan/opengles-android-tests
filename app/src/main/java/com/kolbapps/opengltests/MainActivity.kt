@@ -23,8 +23,9 @@ class MainActivity : AppCompatActivity() {
         if (supportsEs2) {
             // Request an OpenGL ES 2.0 compatible context.
             glSurfaceView.setEGLContextClientVersion(2)
+
             // Assign our renderer.
-            glSurfaceView.setRenderer(FirstOpenGLProjectRenderer())
+            glSurfaceView.setRenderer(AirHockeyRenderer(this))
             rendererSet = true
         } else {
             Toast.makeText(
